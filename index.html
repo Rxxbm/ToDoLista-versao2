@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+    <style>
+        #resultado{
+            width: 800px;
+            margin: auto;
+            padding: 0px;
+            vertical-align: bottom;
+            margin-top: 3%;
+            height: 100%;
+        }
+        #resultado button{
+            padding: 2px;
+            float: right;
+        }
+        h4{
+            display: inline-block;
+            text-decoration: none;
+            font-size: 12pt;
+            padding: 8px;
+            font-weight: normal;
+        }
+        @media screen and (max-width: 1336px){
+            #resultado{
+                width: 500px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lista de Tarefas</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#" class="font-effect-outline" onclick="cadastrar()">CADASTRAR</a></li>
+            <li><a href="#" class="font-effect-outline" onclick="exibir()">EXIBIR</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div id="cadastrar" style="display: block;">
+            <h2 style="font-family: 'Times New Roman', Times, serif;">Adicionar Tarefas</h2>
+            <p>Descreva a Tarefa: <input type="text" id="txt" placeholder="Ex: Ler um livro."></p>
+            <p style="padding: 0; padding-bottom: 42px;">Insira o Intervalo: <input type="text" id="txt2" placeholder="Ex: Ler um livro no intervalo da escola."></p>
+            <button onclick="adicionar()">ADICIONAR</button>
+        </div>
+        <div id="exibir" style="display: none;">
+            <h2>Tarefas Adicionadas: </h2>
+            <p id="resultado">
+                
+            </p>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
